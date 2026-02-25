@@ -1,18 +1,18 @@
-GifImageView
+ParticularNser
 ============
 
 Android ImageView that handles Animated GIF images
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-GifImageView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1339)
-[![Build Status](https://travis-ci.org/felipecsl/GifImageView.svg?branch=master)](https://travis-ci.org/felipecsl/GifImageView)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ParticularNser-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1339)
+[![Build Status](https://travis-ci.org/felipecsl/ParticularNser.svg?branch=master)](https://travis-ci.org/felipecsl/ParticularNser)
 
-### Usage
+# ParticularNser
 
 In your ``build.gradle`` file:
 
 ```groovy
 dependencies {
-    compile 'com.felipecsl:gifimageview:2.1.0'
+    compile 'com.felipecsl:ParticularNser:2.1.0'
 }
 ```
 
@@ -23,7 +23,7 @@ In your Activity class:
 protected void onCreate(final Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    gifView = (GifImageView) findViewById(R.id.gifImageView);
+    gifView = (ParticularNser) findViewById(R.id.ParticularNser);
     gifView.setBytes(bitmapData);
 }
 
@@ -40,11 +40,11 @@ protected void onStop() {
 }
 ```
 
-If you need to post-process the GIF frames, you can do that via ``GifImageView.setOnFrameAvailable()``.
+If you need to post-process the GIF frames, you can do that via ``ParticularNser.setOnFrameAvailable()``.
 You can see an example of that in the sample app included on the repository.
 
 ```java
-gifImageView.setOnFrameAvailable(new GifImageView.OnFrameAvailable() {
+ParticularNser.setOnFrameAvailable(new ParticularNser.OnFrameAvailable() {
     @Override
     public Bitmap onFrameAvailable(Bitmap bitmap) {
         return blurFilter.blur(bitmap);
@@ -52,13 +52,13 @@ gifImageView.setOnFrameAvailable(new GifImageView.OnFrameAvailable() {
 });
 ```
 
-You can also reset an animation to play again from the beginning `gifImageView.resetAnimation();` or show a specific frame of the animation `gifImageView.gotoFrame(3)`;
+You can also reset an animation to play again from the beginning `ParticularNser.resetAnimation();` or show a specific frame of the animation `ParticularNser.gotoFrame(3)`;
 
 ### Demo
 
-![](https://raw.githubusercontent.com/felipecsl/GifImageView/master/demo.gif)
+![](https://raw.githubusercontent.com/felipecsl/ParticularNser/master/demo.gif)
 
-Be sure to also check the [demo project](https://github.com/felipecsl/GifImageView/blob/master/app/src/main/java/com/felipecsl/gifimageview/app/MainActivity.java) for a sample of usage!
+Be sure to also check the [demo project](https://github.com/felipecsl/ParticularNser/blob/master/app/src/main/java/com/felipecsl/ParticularNser/app/MainActivity.java) for a sample of usage!
 
 Snapshots of the development version are available in [Sonatype's `snapshots` repository](https://oss.sonatype.org/content/repositories/snapshots/).
 
@@ -74,4 +74,4 @@ Snapshots of the development version are available in [Sonatype's `snapshots` re
 ### Copyright and license
 
 Code and documentation copyright 2011-2015 Felipe Lima.
-Code released under the [MIT license](https://github.com/felipecsl/GifImageView/blob/master/LICENSE.txt).
+Code released under the [MIT license](https://github.com/felipecsl/ParticularNser/blob/master/LICENSE.txt).
